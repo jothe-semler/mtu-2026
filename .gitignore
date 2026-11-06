@@ -1,0 +1,9 @@
+# Plaintext-kilde, hemmeligheder og build-filer må ALDRIG committes
+.env
+.env.*
+src/
+build/
+.staticrypt.json
+node_modules/
+*.plain.html
+*.log

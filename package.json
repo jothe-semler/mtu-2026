@@ -1,0 +1,15 @@
+{
+  "name": "mtu-2026",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Adgangskodebeskyttet MTU 2026-side med anonym afstemning (Google Sheets som database).",
+  "type": "module",
+  "scripts": {
+    "init": "node scripts/init-env.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check-leaks.mjs"
+  },
+  "devDependencies": {
+    "staticrypt": "^3.5.4"
+  }
+}
