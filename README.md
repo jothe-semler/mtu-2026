@@ -63,7 +63,7 @@ git push
    - Værdi: værdien af `MTU_API_SECRET` fra `.env`
 
    Tryk **Gem scriptegenskaber**.
-5. Gå tilbage til **Editor** (`< >`). Vælg funktionen `opsaetning` i rullemenuen øverst, og tryk **Kør**.
+5. Gå tilbage til **Editor** (`< >`). Funktionen `opsaetning` er valgt som standard i rullemenuen øverst. Tryk **Kør**.
    - Godkend adgang med din Google-konto. Hvis Google viser *"Google har ikke bekræftet denne app"*, skal du vælge **Avanceret → Gå til … (usikker)**, fordi det er dit eget script.
    - Fanen **Stemmer** bliver oprettet i regnearket.
 6. Vælg **Implementer → Ny implementering**. Klik på tandhjulet ved *Vælg type*, og vælg **Webapp**.

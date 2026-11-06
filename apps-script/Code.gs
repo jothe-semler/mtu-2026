@@ -16,6 +16,13 @@ const QUESTION_COUNT = 28;
 const VALID_IDS = Array.from({ length: QUESTION_COUNT }, (_, i) => 'q' + String(i + 1).padStart(2, '0'));
 const VOTE_ID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
+/** Kør én gang fra editoren for at godkende adgang og oprette fanen "Stemmer". */
+function opsaetning() {
+  const sheet = getSheet_();
+  const configured = !!PropertiesService.getScriptProperties().getProperty('API_SECRET');
+  console.log('Fanen "' + sheet.getName() + '" er klar. API_SECRET er ' + (configured ? 'sat.' : 'IKKE sat endnu – se README.'));
+}
+
 function doPost(e) {
   try {
     const req = parseRequest_(e);
@@ -38,13 +45,6 @@ function doPost(e) {
 function doGet() {
   const configured = !!PropertiesService.getScriptProperties().getProperty('API_SECRET');
   return json_({ ok: true, service: 'mtu-afstemning', configured: configured });
-}
-
-/** Kør én gang fra editoren for at godkende adgang og oprette fanen "Stemmer". */
-function opsaetning() {
-  const sheet = getSheet_();
-  const configured = !!PropertiesService.getScriptProperties().getProperty('API_SECRET');
-  console.log('Fanen "' + sheet.getName() + '" er klar. API_SECRET er ' + (configured ? 'sat.' : 'IKKE sat endnu – se README.'));
 }
 
 function handleVote_(req) {
