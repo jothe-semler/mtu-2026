@@ -77,6 +77,8 @@ git push
 
 > **Bemærk:** Hvis *"Alle"* ikke kan vælges i trin 6, fordi firmaets Google Workspace begrænser det, skal du bruge en privat Google-konto. Regnearket indeholder kun spørgsmåls-id'er og ingen MTU-tekster.
 
+> **Selvstændigt script:** Scriptet kan også oprettes som et selvstændigt projekt på [script.google.com](https://script.google.com) i stedet for via regnearket. Så skal du desuden tilføje scriptegenskaben `SPREADSHEET_ID` med regnearkets id, som er den lange kode i regnearkets URL mellem `/d/` og `/edit`. Den nuværende live-opsætning er lavet sådan i projektet *MTU 2026 – afstemning*.
+
 ### Når Code.gs ændres senere
 
 Vælg **Implementer → Administrer implementeringer**, klik på blyanten, vælg **Version: Ny version** og tryk **Implementer**. URL'en forbliver den samme.
